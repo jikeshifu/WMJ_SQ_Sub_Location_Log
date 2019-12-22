@@ -1,0 +1,56 @@
+{include file="admin_header.html"}
+<style>
+@media screen and (max-width: 767px) {
+	.zdy-hidden{
+		display: none;
+	}
+}
+</style>
+<div class="main">
+	<div class="main-content">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="panel">
+						<div class="panel-heading">
+							<h3 class="panel-title">门禁列表</h3>
+						</div>
+						<div class="panel-body">
+							<table class="table table-bordered">
+								<thead>
+									<tr>
+										<th>门禁名称</th>
+										<th class="zdy-hidden">序列号</th>
+										<th class="zdy-hidden">SIM号码</th>
+										<th>二维码</th>
+										<th>状态</th>
+										<th>编辑</th>
+										<th>操作</th>
+									</tr>
+								</thead>
+								<tbody>
+									{section name=key loop=$list}
+									<tr>
+										<td>{$list[key].name}</td>
+										<td  class="zdy-hidden">{$list[key].sn}</td>
+										<td  class="zdy-hidden">{$list[key].sim}</td>
+										<td>
+											进：<a href="admin.php?ac=qrcode&id={$list[key].id}&type=1" target="_blank"><i class="icon icon-qrcode"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;出：<a href="admin.php?ac=qrcode&id={$list[key].id}&type=2" target="_blank"><i class="icon icon-qrcode"></i></a>
+										</td>
+										<td>{$list[key].online}&nbsp;&nbsp;{$list[key].state}</td>
+										<td><a href="admin.php?ac=edit&id={$list[key].id}">编辑</a></td>
+										<td><a href="admin.php?ac=list&do=del&id={$list[key].id}"><i class="icon icon-del"></i></a></td>
+									</tr>
+									{/section}
+								</tbody>
+							</table>
+							{$page_str}
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="clearfix"></div>
+{include file="admin_footer.html"}

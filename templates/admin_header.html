@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="cn" class="fullscreen-bg">
+<head>
+	<title>门禁管理中心</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	
+	<link rel="stylesheet" href="static/assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="static/assets/css/main.css">
+	<link rel="stylesheet" href="static/iconfont/style.css">
+</head>
+<body>
+<div id="wrapper">
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container-fluid">
+			<div class="navbar-btn">
+				<a href="javascript:;" class="btn-toggle-fullwidth"><i class="icon icon-menu"></i></button>
+			</div>
+			<div class="navbar-btn" style="float: right;">
+				<a href="admin.php?ac=login&do=out"><i class="icon icon-logout"></i></a>
+			</div>
+		</div>
+	</nav>
+	<div id="sidebar-nav" class="sidebar">
+		<div class="sidebar-scroll">
+			<nav>
+				<ul class="nav">
+					<li><a href="admin.php?ac=setting" class="{$nav_setting}"><span>设置</span></a></li>
+					<li><a href="admin.php?ac=add" class="{$nav_add}"><span>添加门禁</span></a></li>
+					<li><a href="admin.php?ac=list" class="{$nav_list}"><span>门禁列表</span></a></li>
+					<li><a href="admin.php?ac=log" class="{$log_list}"><span>开门日志</span></a></li>
+					<li><a href="admin.php?ac=pwd" class="{$pwd_list}"><span>密码修改</span></a></li>
+				</ul>
+			</nav>
+		</div>
+	</div>

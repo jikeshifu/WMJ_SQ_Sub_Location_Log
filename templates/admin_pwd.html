@@ -1,0 +1,29 @@
+{include file="admin_header.html"}
+<div class="main">
+	<div class="main-content">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="panel">
+						<div class="panel-heading">
+							<h3 class="panel-title">修改密码</h3>
+						</div>
+						<div class="panel-body">
+							<form class="form-auth-small" action="admin.php?ac=pwd" method="post">
+								<input type="password" name="oldpwd" class="form-control" placeholder="请输入原密码">
+								<br>
+								<input type="password" name="pwd" class="form-control" placeholder="请输入新密码">
+								<br>
+								<input type="password" name="pwd2" class="form-control" placeholder="确认新密码">
+								<br>
+								<button type="submit" class="btn btn-primary">修改</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="clearfix"></div>
+{include file="admin_footer.html"}

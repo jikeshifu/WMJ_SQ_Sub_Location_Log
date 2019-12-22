@@ -1,0 +1,54 @@
+{include file="admin_header.html"}
+
+<style>
+@media screen and (max-width: 767px) {
+	.zdy-hidden{
+		display: none;
+	}
+}
+</style>
+
+<div class="main">
+	<div class="main-content">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="panel">
+						<div class="panel-heading">
+							<h3 class="panel-title">开门日志</h3>
+						</div>
+						<div class="panel-body">
+							<table class="table table-bordered">
+								<thead>
+									<tr>
+										<th>门禁名称</th>
+										<th>操作人</th>
+                                        <th>openid</th>
+										<th>类型</th>
+										<th>时间</th>
+										<th>备注</th>
+									</tr>
+								</thead>
+								<tbody>
+									{section name=key loop=$list}
+									<tr>
+										<td>{$list[key].name}</td>
+										<td>{$list[key].nickname}</td>
+                                        <td>{$list[key].openid}</td>
+										<td>{$list[key].type}</td>
+										<td>{$list[key].addtime}</td>
+										<td>{$list[key].msg}</td>
+									</tr>
+									{/section}
+								</tbody>
+							</table>
+							{$page_str}
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="clearfix"></div>
+{include file="admin_footer.html"}
